@@ -19,7 +19,7 @@
 
 - **Hyprland** — tiling Wayland compositor with custom keybindings and window rules
 - **Waybar** — status bar with audio, network, Bluetooth, battery, clock, and a Rofi-powered power menu
-- **Rofi** — application launcher and power menu, themed to match the wallpaper palette
+- **Rofi** — application launcher and power menu, themed to match the wallpaper palette(pewdiepie-script)
 - **Kitty** — terminal emulator with a custom dark navy theme and neofetch on startup
 - **swww** — wallpaper daemon for smooth wallpaper transitions
 
