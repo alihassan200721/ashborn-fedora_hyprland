@@ -8,6 +8,8 @@
     "spacing": 0,
 
     "modules-left": [
+        "custom/power",
+        "battery",
         "hyprland/workspaces"
     ],
 
@@ -17,11 +19,10 @@
 
     "modules-right": [
         "bluetooth",
+        "custom/brightness",
         "pulseaudio",
         "network",
-        "battery",
         "tray",
-        "custom/power"
     ],
 
     "hyprland/workspaces": {
@@ -121,15 +122,16 @@
         "tooltip-format": "Left click: Power menu\nRight click: Restart",
         "on-click":       "bash -c 'case $(echo -e \"⏻  Shutdown\n  Restart\n  Suspend\n  Lock\" | rofi -dmenu -p \"Power\" -theme ~/.config/rofi/theme.rasi) in \"⏻  Shutdown\") systemctl poweroff ;; \"  Restart\") systemctl reboot ;; \"  Suspend\") systemctl suspend ;; \"  Lock\") swaylock ;; esac'",
         "on-click-right": "systemctl reboot"
+    },
+    "custom/brightness": {
+        "exec": "~/.config/waybar/brightness.sh",
+        "interval": 2,
+        "format": "{}",
+        "on-scroll-up":   "brightnessctl set +5% && pkill -RTMIN+10 waybar",
+        "on-scroll-down": "brightnessctl set 5%- && pkill -RTMIN+10 waybar",
+        "signal": 10,
+        "tooltip": false
     }
 }
 
-"custom/brightness": {
-    "exec": "~/.config/waybar/brightness.sh",
-    "interval": 2,
-    "format": "{}",
-    "on-scroll-up":   "brightnessctl set +5% && pkill -RTMIN+10 waybar",
-    "on-scroll-down": "brightnessctl set 5%- && pkill -RTMIN+10 waybar",
-    "signal": 10,
-    "tooltip": false
-}
+

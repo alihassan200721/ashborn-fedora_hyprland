@@ -223,3 +223,21 @@ background-color: rgba(120, 30, 30, 0.75);
 border-color:     rgba(232, 138, 138, 0.65);
 color:            #ffaaaa;
 }
+
+
+/* ── Brightness ───────────────────────────────── */
+#custom-brightness {
+color:            #f0d080;
+background-color: rgba(40, 35, 10, 0.55);
+border:           1px solid rgba(240, 208, 128, 0.28);
+border-radius:    10px;
+padding:          4px 14px;
+margin:           5px 4px;
+transition:       all 0.2s ease;
+}
+
+#custom-brightness:hover {
+background-color: rgba(80, 65, 10, 0.70);
+border-color:     rgba(240, 208, 128, 0.55);
+color:            #fce8a0;
+}
