@@ -29,10 +29,12 @@
 
 | Name          | Hex       |
 |---------------|-----------|
-| Deep Navy     | `#0d1520` |
-| Mist Blue     | `#2e4d6e` |
-| Fog Highlight | `#5e8aaa` |
-| Soft White    | `#c8d8e8` |
+| Deep Forest     | `#1a2820` |
+| Sage Surface     | `#2a3d35` |
+| Mist Sage | `#8aada0` |
+| Pale Sky    | `#b8cec8` |
+| Amber Glow    | `#c4a87a` |
+| Ember Accent    | `#d48860` |
 
 ---
 
