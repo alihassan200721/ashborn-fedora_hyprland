@@ -87,7 +87,6 @@ ashborn-fedora_hyprland/
 | `Super + Enter` | Open terminal (Kitty) |
 | `Super + B` | Open Firefox |
 | `Super + C` | Open VS Code |
-| `Super + Shift + B` | Open Blender |
 | `Super + O` | Open OBS |
 | `Super + D` | Open Rofi launcher |
 | `Super + Q` | Close window |
