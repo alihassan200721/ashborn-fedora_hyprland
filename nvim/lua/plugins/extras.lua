@@ -84,4 +84,36 @@ return {
     vim.cmd("SmoothCursorStart")
   end,
 },
+-- Symbols outline (functions, classes viewer)
+{
+  "stevearc/aerial.nvim",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("aerial").setup({
+      layout = {
+        default_direction = "right",  -- opens on the right side
+        width = 35,
+      },
+      show_guides = true,
+      attach_mode = "global",
+      backends = { "treesitter", "lsp" },
+      filter_kind = {
+        "Class",
+        "Constructor",
+        "Enum",
+        "Function",
+        "Interface",
+        "Method",
+        "Module",
+        "Struct",
+      },
+    })
+
+    -- Toggle with Ctrl+o like VS Code outline
+    vim.keymap.set("n", "<leader>o", "<cmd>AerialToggle<CR>", { desc = "Toggle symbols outline" })
+  end,
+},
 }

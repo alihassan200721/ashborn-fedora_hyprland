@@ -1,3 +1,4 @@
+-- lua/plugins/dap.lua
 return {
   -- Core debugger
   {
@@ -9,6 +10,36 @@ return {
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
+
+      -- C / C++ debugger via codelldb
+      local mason_path = vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/"
+      local codelldb_path = mason_path .. "adapter/codelldb"
+      local liblldb_path  = mason_path .. "lldb/lib/liblldb.so"
+
+      dap.adapters.codelldb = {
+        type = "server",
+        port = "${port}",
+        executable = {
+          command = codelldb_path,
+          args    = { "--liblldb", liblldb_path, "--port", "${port}" },
+        },
+      }
+
+      dap.configurations.c = {
+        {
+          name    = "Launch (C)",
+          type    = "codelldb",
+          request = "launch",
+          program = function()
+            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+          end,
+          cwd         = "${workspaceFolder}",
+          stopOnEntry = false,
+          terminal    = "integrated",
+        },
+      }
+
+      dap.configurations.cpp = dap.configurations.c
 
       -- Auto open/close UI when debugging starts/ends
       dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open() end
@@ -27,7 +58,6 @@ return {
       vim.keymap.set("n", "<leader>du", dapui.toggle,          { desc = "Toggle debugger UI" })
     end,
   },
-
   -- DAP UI panels
   {
     "rcarriga/nvim-dap-ui",
@@ -36,7 +66,6 @@ return {
       require("dapui").setup()
     end,
   },
-
   -- Python debugger
   {
     "mfussenegger/nvim-dap-python",

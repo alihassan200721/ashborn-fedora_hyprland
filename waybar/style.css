@@ -1,7 +1,8 @@
 /* ================================================
- *  Waybar Style — Misty Lake
- *  Matched to midnight blue wallpaper
- *  Colors: deep navy, mist blue, soft white glow
+ *  Waybar Style — Dusky Cityscape
+ *  Matched to rooftop dusk wallpaper
+ *  Colors: pale sky grey-teal, muted sage, deep
+ *          forest charcoal, warm amber city glow
  *  ================================================ */
 
 * {
@@ -17,10 +18,10 @@
 
 /* ── Bar ──────────────────────────────────────── */
 window#waybar {
-  background-color: rgba(10, 16, 26, 0.88);
-  border-bottom:    1px solid rgba(94, 138, 170, 0.20);
+  background-color: rgba(26, 40, 32, 0.78);
+  border-bottom:    1px solid rgba(138, 173, 160, 0.35);
   border-radius:    14px;
-  color:            #c8d8e8;
+  color:            #c4d4cc;
 }
 
 /* ── Shared pill style ────────────────────────── */
@@ -31,13 +32,13 @@ window#waybar {
 #network,
 #battery,
 #tray {
-background-color: rgba(22, 38, 58, 0.80);
-border:           1px solid rgba(94, 138, 170, 0.18);
-border-radius:    10px;
-padding:          4px 14px;
-margin:           5px 4px;
-color:            #c8d8e8;
-transition:       all 0.2s ease;
+  background-color: rgba(32, 52, 42, 0.82);
+  border:           1px solid rgba(138, 173, 160, 0.18);
+  border-radius:    10px;
+  padding:          4px 14px;
+  margin:           5px 4px;
+  color:            #b8cec8;
+  transition:       all 0.2s ease;
 }
 
 /* ── Hover effect on all modules ─────────────── */
@@ -46,198 +47,197 @@ transition:       all 0.2s ease;
 #network:hover,
 #battery:hover,
 #clock:hover {
-background-color: rgba(46, 77, 110, 0.80);
-border-color:     rgba(126, 184, 212, 0.45);
-color:            #e8f4fc;
+  background-color: rgba(138, 173, 160, 0.22);
+  border-color:     rgba(184, 206, 200, 0.42);
+  color:            #dceae6;
 }
 
 /* ── Workspaces ───────────────────────────────── */
 #workspaces {
-padding: 4px 8px;
+  padding: 4px 8px;
 }
 
 #workspaces button {
-background-color: transparent;
-color:            #4a6a85;
-border-radius:    7px;
-padding:          2px 10px;
-margin:           1px 2px;
-font-size:        13px;
-font-weight:      600;
-border:           1px solid transparent;
-transition:       all 0.2s ease;
+  background-color: transparent;
+  color:            #9ab8b0;
+  border-radius:    7px;
+  padding:          2px 10px;
+  margin:           1px 2px;
+  font-size:        13px;
+  font-weight:      600;
+  border:           1px solid transparent;
+  transition:       all 0.2s ease;
 }
 
 #workspaces button:hover {
-background-color: rgba(46, 77, 110, 0.50);
-color:            #c8d8e8;
-border-color:     rgba(94, 138, 170, 0.30);
+  background-color: rgba(42, 61, 53, 0.55);
+  color:            #b8cec8;
+  border-color:     rgba(138, 173, 160, 0.30);
 }
 
 #workspaces button.active {
-background-color: rgba(46, 77, 110, 0.85);
-color:            #7eb8d4;
-border-color:     rgba(126, 184, 212, 0.55);
-font-weight:      700;
+  background-color: rgba(42, 61, 53, 0.88);
+  color:            #8aada0;
+  border-color:     rgba(138, 173, 160, 0.55);
+  font-weight:      700;
 }
 
 #workspaces button.urgent {
-background-color: rgba(180, 100, 100, 0.25);
-color:            #e88a8a;
-border-color:     rgba(232, 138, 138, 0.45);
+  background-color: rgba(160, 110, 60, 0.25);
+  color:            #d4a870;
+  border-color:     rgba(196, 168, 122, 0.45);
 }
 
 /* ── Clock (center) ───────────────────────────── */
 #clock {
-color:       #7eb8d4;
-font-weight: 600;
-font-size:   14px;
-border-color: rgba(126, 184, 212, 0.25);
-padding:     4px 20px;
+  color:        #8aada0;
+  font-weight:  600;
+  font-size:    14px;
+  border-color: rgba(138, 173, 160, 0.25);
+  padding:      4px 20px;
 }
 
 /* ── Bluetooth ────────────────────────────────── */
 #bluetooth {
-color: #89c4e1;
+  color: #9ec8be;
 }
 
 #bluetooth.on,
 #bluetooth.connected {
-color:            #7eb8d4;
-background-color: rgba(46, 77, 110, 0.65);
-border-color:     rgba(126, 184, 212, 0.35);
+  color:            #8aada0;
+  background-color: rgba(42, 61, 53, 0.68);
+  border-color:     rgba(138, 173, 160, 0.38);
 }
 
 #bluetooth.off,
 #bluetooth.disabled {
-color:            #3a5570;
-background-color: rgba(16, 26, 40, 0.60);
+  color:            #3a5048;
+  background-color: rgba(18, 28, 22, 0.60);
 }
 
 /* ── Volume / Audio ───────────────────────────── */
 #pulseaudio {
-color: #a8cfe0;
+  color: #a8c8c0;
 }
 
 #pulseaudio.muted {
-color:            #3a5570;
-background-color: rgba(16, 26, 40, 0.60);
-border-color:     rgba(58, 85, 112, 0.30);
+  color:            #3a5048;
+  background-color: rgba(18, 28, 22, 0.60);
+  border-color:     rgba(58, 80, 72, 0.30);
 }
 
 #pulseaudio.bluetooth {
-color: #89c4e1;
+  color: #9ec8be;
 }
 
 /* ── Network ──────────────────────────────────── */
 #network {
-color: #b0d8ee;
+  color: #b0d0c8;
 }
 
 #network.disconnected {
-color:            #3a5570;
-background-color: rgba(16, 26, 40, 0.60);
-border-color:     rgba(58, 85, 112, 0.30);
+  color:            #3a5048;
+  background-color: rgba(18, 28, 22, 0.60);
+  border-color:     rgba(58, 80, 72, 0.30);
 }
 
 #network.linked {
-color: #7eb8d4;
+  color: #8aada0;
 }
 
 /* ── Battery ──────────────────────────────────── */
 #battery {
-color: #9ad4b8;
+  color: #9abdb2;
 }
 
 #battery.full,
 #battery.good {
-color: #9ad4b8;
+  color: #9abdb2;
 }
 
 #battery.charging,
 #battery.plugged {
-color:            #7eb8d4;
-background-color: rgba(46, 77, 110, 0.65);
-border-color:     rgba(126, 184, 212, 0.35);
+  color:            #8aada0;
+  background-color: rgba(42, 61, 53, 0.68);
+  border-color:     rgba(138, 173, 160, 0.38);
 }
 
 #battery.warning:not(.charging) {
-color:            #e8c87a;
-background-color: rgba(60, 50, 20, 0.50);
-border-color:     rgba(232, 200, 122, 0.30);
+  color:            #c4a87a;
+  background-color: rgba(55, 42, 18, 0.52);
+  border-color:     rgba(196, 168, 122, 0.30);
 }
 
 #battery.critical:not(.charging) {
-color:            #e88a8a;
-background-color: rgba(60, 20, 20, 0.55);
-border-color:     rgba(232, 138, 138, 0.40);
-animation:        blink 1.2s ease-in-out infinite;
+  color:            #d48860;
+  background-color: rgba(60, 32, 16, 0.58);
+  border-color:     rgba(212, 136, 96, 0.40);
+  animation:        blink 1.2s ease-in-out infinite;
 }
 
 @keyframes blink {
-  50% { background-color: rgba(90, 30, 30, 0.70); }
+  50% { background-color: rgba(85, 46, 22, 0.72); }
 }
 
 /* ── Tray ─────────────────────────────────────── */
 #tray {
-padding: 4px 10px;
+  padding: 4px 10px;
 }
 
 #tray > .passive {
--gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
--gtk-icon-effect: highlight;
-background-color: rgba(180, 100, 100, 0.20);
+  -gtk-icon-effect: highlight;
+  background-color: rgba(196, 168, 122, 0.20);
 }
 
 /* ── Tooltips ─────────────────────────────────── */
 tooltip {
-  background-color: rgba(10, 16, 26, 0.96);
-  border:           1px solid rgba(94, 138, 170, 0.35);
+  background-color: rgba(14, 22, 18, 0.96);
+  border:           1px solid rgba(138, 173, 160, 0.32);
   border-radius:    10px;
-  color:            #c8d8e8;
+  color:            #b8cec8;
   font-size:        12px;
   padding:          6px;
 }
 
 tooltip label {
-  color: #c8d8e8;
+  color: #b8cec8;
 }
 
 /* ── Power button ─────────────────────────────── */
 #custom-power {
-color:            #e88a8a;
-font-size:        16px;
-padding:          4px 16px;
-margin:           5px 4px 5px 2px;
-background-color: rgba(60, 20, 20, 0.55);
-border:           1px solid rgba(232, 138, 138, 0.30);
-border-radius:    10px;
-transition:       all 0.2s ease;
+  color:            #d48860;
+  font-size:        16px;
+  padding:          4px 16px;
+  margin:           5px 4px 5px 2px;
+  background-color: rgba(55, 28, 12, 0.55);
+  border:           1px solid rgba(212, 136, 96, 0.30);
+  border-radius:    10px;
+  transition:       all 0.2s ease;
 }
 
 #custom-power:hover {
-background-color: rgba(120, 30, 30, 0.75);
-border-color:     rgba(232, 138, 138, 0.65);
-color:            #ffaaaa;
+  background-color: rgba(95, 50, 20, 0.75);
+  border-color:     rgba(212, 136, 96, 0.65);
+  color:            #e8a880;
 }
-
 
 /* ── Brightness ───────────────────────────────── */
 #custom-brightness {
-color:            #f0d080;
-background-color: rgba(40, 35, 10, 0.55);
-border:           1px solid rgba(240, 208, 128, 0.28);
-border-radius:    10px;
-padding:          4px 14px;
-margin:           5px 4px;
-transition:       all 0.2s ease;
+  color:            #c4a87a;
+  background-color: rgba(44, 34, 14, 0.55);
+  border:           1px solid rgba(196, 168, 122, 0.28);
+  border-radius:    10px;
+  padding:          4px 14px;
+  margin:           5px 4px;
+  transition:       all 0.2s ease;
 }
 
 #custom-brightness:hover {
-background-color: rgba(80, 65, 10, 0.70);
-border-color:     rgba(240, 208, 128, 0.55);
-color:            #fce8a0;
+  background-color: rgba(72, 56, 18, 0.70);
+  border-color:     rgba(196, 168, 122, 0.55);
+  color:            #dcc890;
 }
